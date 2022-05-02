@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turn on the light</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h2>What Can JavaScript Do?</h2>
+    
+    <p>JavaScript can change HTML attribute values</p>
+
+    <p>In this case JavaScript changes the value of the <source>  attributes of an image.</p>
+
+    <div class="image-content">
+    <button id="Btn1">Turn on the light</button>
+
+    <img id="myImage" src="myImages/bulb-off-new.JPG" alt="">
+
+    <button id="Btn2">Turn off the light</button>
+    </div>
+    </div>
+
+    <!--Internal Javascript-->
+
+    <script>
+    const Btn1 = document.getElementById("Btn1");
+    const Btn2 = document.getElementById("Btn2");
+    var myImage = document.getElementById("myImage");
+
+    Btn1.addEventListener('click',function(){
+        myImage.src="myImages/bulb-on-new.JPG";
+    })
+    Btn2.addEventListener('click',function(){
+        myImage.src="myImages/bulb-off-new.JPG";
+    })
+    
+    </script>
+
+</body>
+</html>
